@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/frontend_assets/assets'
 import { useLocation } from 'react-router';
@@ -8,10 +8,10 @@ const SearchBar = () => {
     const location = useLocation();
 
     useEffect(()=>{
-if(location.pathname === '/'){
-    setShowSearch(false)
-} else{
+if(location.pathname === '/collection'){
     setShowSearch(true)
+} else{
+    setShowSearch(false)
 }
     },[location])
 
